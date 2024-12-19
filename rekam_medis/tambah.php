@@ -43,7 +43,7 @@ include_once('../_header.php');
                 </div>
                 <div class="form-group">
                     <label for="diagnosa">Diagnosa</label>
-                    <textarea name="diagnosa" id="diagnosa" class="form-control" required></textarea>
+                    <textarea name="diagnosa" id="diagnosa" class="form-control" rows="4" required></textarea>
                 </div>
                 <div class="form-group">
                     <label for="poli">Poliklinik</label>

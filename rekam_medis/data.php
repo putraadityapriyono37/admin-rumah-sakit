@@ -41,7 +41,7 @@
                         <td><?= $data['nama_dokter'] ?></td>
                         <td><?= $data['diagnosa'] ?></td>
                         <td><?= $data['nama_poli'] ?></td>
-                        <td>    
+                        <td>
                             <?php
                             $sql_obat = mysqli_query($con, "SELECT * FROM tb_rm_obat JOIN tb_obat ON tb_rm_obat.id_obat = tb_obat.id_obat WHERE id_rm = '$data[id_rm]'") or die(mysqli_error($con));
                             while ($data_obat = mysqli_fetch_array($sql_obat)) {
@@ -50,6 +50,7 @@
                             ?>
                         </td>
                         <td>
+                            <a href="edit.php?id=<?= $data['id_rm'] ?>" class="btn btn-warning btn-xs"><i class="glyphicon glyphicon-edit"></i></a>
                             <a href="delete.php?id=<?= $data['id_rm'] ?>" class="btn btn-danger btn-xs" onclick="return confirm('Yakin menghapus data?')"><i class="glyphicon glyphicon-trash"></i></a>
                         </td>
                     </tr>
