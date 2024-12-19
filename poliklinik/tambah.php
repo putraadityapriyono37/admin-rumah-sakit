@@ -23,7 +23,7 @@
                         <tr>
                             <td><?= $i ?></td>
                             <td>
-                                <input type="text" name="nama-<?= $i ?>" class="form-control" required>
+                                <input type="text" name="nama-<?= $i ?>" class="form-control" required autofocus>
                             </td>
                             <td>
                                 <input type="text" name="gedung-<?= $i ?>" class="form-control" required>
