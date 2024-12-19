@@ -1,0 +1,140 @@
+/*!
+ * Custom Sidebar CSS 
+ */
+
+/* Toggle Styles */
+
+#wrapper {
+    padding-left: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#wrapper.toggled {
+    padding-left: 250px;
+}
+
+#sidebar-wrapper {
+    z-index: 1000;
+    position: fixed;
+    left: 250px;
+    width: 0;
+    height: 100%;
+    margin-left: -250px;
+    overflow-y: auto;
+    background: #2c3e50;
+    box-shadow: 3px 0 5px rgba(0, 0, 0, 0.5); /* Tambahkan bayangan */
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+    width: 250px;
+}
+
+#page-content-wrapper {
+    width: 100%;
+    padding: 15px;
+}
+
+#wrapper.toggled #page-content-wrapper {
+    position: absolute;
+    margin-right: -250px;
+}
+
+/* Sidebar Styles */
+
+.sidebar-nav {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.sidebar-nav li {
+    text-indent: 20px;
+    line-height: 50px; /* Lebih tinggi untuk kenyamanan */
+}
+
+.sidebar-nav li a {
+    display: flex; /* Ikon dan teks dalam satu baris */
+    align-items: center;
+    gap: 10px; /* Jarak antara ikon dan teks */
+    text-decoration: none;
+    color: #ecf0f1; /* Warna font */
+    padding: 10px 15px;
+    border-radius: 10px; /* Membuat sudut membulat */
+    transition: all 0.3s ease;
+}
+
+.sidebar-nav li a:hover {
+    text-decoration: none;
+    color: #fff;
+    background: #1abc9c; /* Warna hijau untuk efek hover */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3); /* Efek timbul saat hover */
+}
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+    text-decoration: none;
+}
+
+.sidebar-nav > .sidebar-brand {
+    height: 80px;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 80px;
+    color: #1abc9c;
+    text-align: center;
+    border-bottom: 1px solid #34495e; /* Separator */
+}
+
+.sidebar-nav > .sidebar-brand img {
+    width: 50px;
+    border-radius: 50%; /* Membuat logo bulat */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5); /* Efek timbul pada logo */
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.sidebar-nav > .sidebar-brand a {
+    color: #1abc9c;
+    text-decoration: none;
+}
+
+.sidebar-nav > .sidebar-brand a:hover {
+    color: #ecf0f1;
+}
+
+@media (min-width: 768px) {
+    #wrapper {
+        padding-left: 250px;
+    }
+
+    #wrapper.toggled {
+        padding-left: 0;
+    }
+
+    #sidebar-wrapper {
+        width: 250px;
+    }
+
+    #wrapper.toggled #sidebar-wrapper {
+        width: 0;
+    }
+
+    #page-content-wrapper {
+        padding: 20px;
+    }
+
+    #wrapper.toggled #page-content-wrapper {
+        position: relative;
+        margin-right: 0;
+    }
+}
