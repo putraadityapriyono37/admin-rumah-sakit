@@ -12,7 +12,7 @@
             <form action="tambah.php" method="post">
                 <div class="form-group">
                     <label for="count_add">Banyak Record yang Akan Ditambahkan</label>
-                    <input type="text" name="count_add" id="count_add" maxlength="2" pattern="[0-9]+" class="form-control" required>
+                    <input type="text" name="count_add" id="count_add" maxlength="2" pattern="[0-9]+" class="form-control" required autofocus>
                 </div>
                 <div class="form-group pull-right">
                     <input type="submit" name="generate" value="Generate" class="btn btn-success">
